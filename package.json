@@ -1,0 +1,33 @@
+{
+  "name": "itfin-talentlyft-candidates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "npm run pack && npm run zip",
+    "test": "ts-jest",
+    "pack": "tsc -p tsconfig.json",
+    "zip": "node scripts/build-zip.js",
+    "deploy": "npm run build && node scripts/deploy.js"
+  },
+  "author": "Vitalii Savchuk <esvit666@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@itfin/community-apps": "^1.0.0",
+    "@jest/globals": "^29.5.0",
+    "@types/jest": "^29.5.0",
+    "archiver": "^5.3.1",
+    "jest": "^29.5.0",
+    "request": "^2.88.2",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.5",
+    "vm2": "^3.9.14"
+  },
+  "dependencies": {
+    "@types/luxon": "^3.2.0",
+    "luxon": "^3.3.0"
+  }
+}

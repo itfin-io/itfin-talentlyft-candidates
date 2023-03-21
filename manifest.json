@@ -1,0 +1,32 @@
+{
+  "name": "itfin-talentlyft-candidates",
+  "version": "1.0.0",
+  "title": "TalentLyft",
+  "description": "This application involves integration with TalentLyft, which allows for the automatic creation of employee profiles in ITFin when a candidate is hired.",
+  "main": "dist/index.js",
+  "image": "assets/icon.png",
+  "permissions": [
+    "employees_can_manage",
+    "employees_can_create"
+  ],
+  "config": [
+    {
+      "id": "accessToken",
+      "title": "Access Token",
+      "field_type": "text"
+    },
+    {
+      "id": "emailDomain",
+      "title": "Email domain for new candidates",
+      "field_type": "text"
+    }
+  ],
+  "external_hosts": [
+    "https://api.talentlyft.com"
+  ],
+  "api": {
+    "version": {
+      "min": "0.0.1"
+    }
+  }
+}
